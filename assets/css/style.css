@@ -452,6 +452,10 @@ i:hover::after {
   transform: scale(1.05);
 }
 
+.col-md-6 img{
+  margin: 0px -100px;
+}
+
 /*------------------ section 1.2 ---------------------------*/
 
 .col-md-8 .image_right {
@@ -1016,11 +1020,214 @@ footer {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 430px) {
   html {
     font-size: 50%;
   }
   .input-box input {
     width: 100%;
+  }
+  #menu {
+    display: block;
+    margin: 0px 130px;
+  }
+  .logo img {
+    width: 70px;
+    text-decoration: none;
+    color: #fff;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: RightSlide 1s ease forwards;
+  }
+  .navbar {
+    display: none; /* Hidden by default */
+    margin: -200px 800px;
+    transition: all 0.3s ease;
+  }
+  .navbar.active {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 40px;
+    padding: 1rem 3%;
+    margin: 0px 0px;
+    background: #0f0a0a;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.1);
+    display: block;
+  }
+  .home {
+    flex-direction: column-reverse;
+  }
+  .home .text-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    background-color: transparent;
+    padding:0px 0px 400px 30px;
+  }
+  .home .text-content h1 {
+    font-size: 1.5rem;
+    background-color: transparent;
+  }
+  .text-animation h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    background-color: transparent;
+    -webkit-text-stroke: 0.7px #27eab0;
+    background: linear-gradient(#27eab0, #27eab0);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: textSlide 6s linear infinite, TopSlide 1s ease forwards;
+    animation-delay: 2s, 1.2s;
+  }
+  .home .text-content .text-animation h2, h3{
+    background-color: transparent;
+  }
+  .home img {
+    border: 0.2rem solid #27eab0;
+    width: 25vw;
+    height: 30vw;
+  }
+
+
+  /* about responsive section */
+
+  .row .about-text {
+    padding-left: 40px;
+    width: 400px;
+  }
+  .row .about-text > .text-title > h1 {
+    font-size: 22px;
+  }
+  .row .about-text > .text-title > h2 {
+    font-size: 35px;
+  }
+  .row p {
+    font-size: 20px;
+  }
+  .row .about-text > .btn-about-us {
+    width: 120px;
+    height: 25px;
+  }
+  .about-2 .col-md-4 {
+    padding: 6px 0px 0px 40px;
+    width: 330px;
+  }
+  .about-2 .col-md-4 > h2 {
+    font-size: 18px;
+  }
+  .about-2 .col-md-4 > ul li {
+    font-size: 14px;
+  }
+
+
+
+
+  .col-md-8 .image_right > img {
+    width: 300px;
+  }
+  .row .text-a-section-2 > p {
+    padding-left: 0px;
+    margin: 0;
+    font-size: 17px;
+  }
+  .row .text-a-section-2 > h3 {
+    padding: 0px;
+    margin: 20px 0;
+  }
+  .row .text-b-section-2 > p {
+    padding: 0 50px;
+    margin: 0;
+    font-size: 17px;
+  }
+  .row .text-b-section-2 > h3 {
+    padding: 0 50px;
+    margin: 20px 0;
+  }
+
+  .row .col-md-6 > img{
+    width: 100%;
+  }
+
+
+  /* Contact Section */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: none;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-left h1 {
+    font-size: 28px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+  }
+
+  .contact-right {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center;    
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  /* Team Section */
+  .team{
+    align-items: left;
+    padding-right: 900px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 0px;
+    width:300px;
+  }
+
+  .team-member {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team h2 {
+    font-size: 24px;
+    width: 300px;
+  }
+
+  .team .title {
+    font-size: 16px;
+    width: 300px;
+  }
+
+  .team p {
+    font-size: 12px;
+    margin-left: 0px;
+    width: 300px;
   }
 }
