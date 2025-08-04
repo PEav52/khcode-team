@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadeInScanner - Download MadeInScanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+        }
+        .download-container {
+            margin-top: 10%;
+            text-align: center;
+        }
+        .download-card {
+            background: #fff;
+            color: #333;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn-download {
+            background: #28a745;
+            color: #fff;
+            font-size: 1.2em;
+            border-radius: 50px;
+            padding: 10px 30px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-download:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+        .app-icon {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container download-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="download-card">
+                    <img src="madeinscanner.png" alt="Opportune Logo" class="app-icon">
+                    <h2>Download <strong>MadeInScanner</strong></h2>
+                    <p class="mb-4">MadeInScanner lets you scan barcodes and instantly find out which country your product was made in. Fast, simple, and reliable.</p>
+                    <button id="downloadBtn" class="btn btn-download">Download APK</button>
+                </div>
+                <br><br>
+                <div>
+                    <span>
+                        MadeInScanner is your quick and easy tool to identify a product’s country of origin. Just scan the barcode, and the app instantly detects where it was made. Keep track of your scans with a built-in history, and make smarter choices when shopping. Perfect for anyone who wants to know more about the products they buy.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            // File URL and name
+            const fileUrl = 'MadeInScanner.apk'; // Replace with your file path
+            const fileName = 'MadeInScanner.apk'; // File name for download
+
+            // Create a temporary <a> element
+            const a = document.createElement('a');
+            a.href = fileUrl;       // Set file URL
+            a.download = fileName;  // Set file name for download
+
+            // Trigger a click on the <a> element
+            document.body.appendChild(a);
+            a.click();
+
+            // Remove the temporary <a> element
+            document.body.removeChild(a);
+        });
+    </script>
+</body>
+</html>
